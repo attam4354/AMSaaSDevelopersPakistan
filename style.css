@@ -1,0 +1,33 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 30px;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.carousel-caption .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+}
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-weight: bold;
+    color: #222;
+}
