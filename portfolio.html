@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AM SaaS Developers</title>
+
+  <link rel="icon" type="image/png" href="images/88.jpg">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    header {
+      background: #000;
+    }
+
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+    .grayscale {
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}
+.grayscale:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+ footer a:hover {
+    text-decoration: underline;
+    color: #0d6efd;
+  }
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    padding: 20px;
+    background: #000000;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  .service-icon {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 15px;
+  }
+
+  .service-card {
+    background: #000000;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  .service-icon {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 15px;
+  }
+.portfolio-card {
+  background: #000000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 28px;
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+  }
+
+  .whatsapp-float i {
+    vertical-align: middle;
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+     <a class="navbar-brand" href="#"></a>
+    <img src="images/88.jpg" alt="img-fluid" width="50" height="50">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Portfolio Section -->
+<section class="py-5 mt-5 pt-5" id="portfolio">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Our Portfolio</h2>
+    <div class="row g-4">
+
+      <!-- Portfolio Item 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/piggybank--ROgtqYAyQc-unsplash.jpg" class="img-fluid rounded-top" alt="Project 1">
+          <div class="p-3">
+            <h5 class="mb-2">E-commerce Website</h5>
+            <p class="mb-0 text-white">A responsive online store built with Laravel and Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/cardmapr-nl-ThpyYkbL0-0-unsplash.jpg" class="img-fluid rounded-top" alt="Project 2">
+          <div class="p-3">
+            <h5 class="mb-2">Restaurant Website</h5>
+            <p class="mb-0 text-white">Beautiful menu & booking system with animations.</p>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/laurenz-heymann-wAygsCk20h8-unsplash.jpg" class="img-fluid rounded-top" alt="Project 2">
+          <div class="p-3">
+            <h5 class="mb-2">Business Logos</h5>
+            <p class="mb-0 text-white">Beautiful Businees Logos.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/23.jpg" class="img-fluid rounded-top" alt="Project 2">
+          <div class="p-3">
+            <h5 class="mb-2">Business Cards</h5>
+            <p class="mb-0 text-white">A business card is a small, typically rectangular card that provides a person's name, title, company, and contact information.</p>
+          </div>
+        </div>
+      </div>
+
+
+                   <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/11.jpg" class="img-fluid rounded-top" alt="Project 2">
+          <div class="p-3">
+            <h5 class="mb-2">Social Media Graphics</h5>
+            <p class="mb-0 text-white">Social media design is a specialized form of graphic design tailored specifically for platforms like Facebook, Instagram, Twitter, and LinkedIn.</p>
+          </div>
+        </div>
+      </div>
+
+
+      
+                   <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/333.jpg" class="img-fluid rounded-top" alt="Project 2">
+          <div class="p-3">
+            <h5 class="mb-2">Flyers and Banners</h5>
+            <p class="mb-0 text-white">Flyers are single-sheet advertisements, often for event promotion, while banners are larger displays used for branding and information.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <!-- Portfolio Item 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="portfolio-card shadow-sm rounded">
+          <img src="images/olaf-val-UTk9cXzYWAg-unsplash.jpg" class="img-fluid rounded-top" alt="Project 3">
+          <div class="p-3">
+            <h5 class="mb-2">Mobile App UI</h5>
+            <p class="mb-0 text-white">A creative and modern app UI/UX design concept.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Quick Links -->
+      <div class="col-md-6 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="about.html" class="text-white">About Us</a></li>
+          <li><a href="services.html" class="text-white">Services</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="col-md-6 mb-3">
+        <h5>Follow Us</h5>
+        <a href="https://www.facebook.com/amsaasdevelopers" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+        
+        <a href="https://www.instagram.com/amsaasdevelopers/" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.linkedin.com/company/amsaasdevelopers/" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://www.youtube.com/@amsaasdevelopers12" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+      </div>
+
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+923237655443" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <div class="text-center pt-3 border-top mt-3">
+      <small>&copy; 2025 AM SaaS Developers. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
