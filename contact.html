@@ -158,44 +158,33 @@ form .btn {
 
 
 
-<section class="py-5 bg-white pt-5 mt-5 text-black" id="career">
-  <div class="container">
-    <h2 class="text-center mb-4 text-black data-aos="fade-down">Join Our Team</h2>
-    <p class="text-center mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
-      We’re always looking for talented individuals to join our growing team.
-    </p>
+<form name="career" method="POST" data-netlify="true" enctype="multipart/form-data">
+  <input type="hidden" name="form-name" value="career">
 
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form action="careers.php" method="POST" enctype="multipart/form-data" data-aos="fade-up" data-aos-delay="200">
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-control" placeholder="your@email.com" required>
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" name="phone" class="form-control" placeholder="03xx-xxxxxxx" required>
-          </div>
-          <div class="mb-3">
-            <label for="position" class="form-label">Position Applying For</label>
-            <input type="text" name="position" class="form-control" placeholder="e.g. Web Developer" required>
-          </div>
-          <div class="mb-3">
-            <label for="resume" class="form-label">Upload Your Resume</label>
-            <input type="file" name="resume" class="form-control" required>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-4">Submit Application</button>
-          </div>
-        </form>
-      </div>
-    </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
   </div>
-</section>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email Address</label>
+    <input type="email" name="email" class="form-control" placeholder="your@email.com" required>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input type="tel" name="phone" class="form-control" placeholder="03xx-xxxxxxx" required>
+  </div>
+  <div class="mb-3">
+    <label for="position" class="form-label">Position Applying For</label>
+    <input type="text" name="position" class="form-control" placeholder="e.g. Web Developer" required>
+  </div>
+  <div class="mb-3">
+    <label for="resume" class="form-label">Upload Your Resume</label>
+    <input type="file" name="resume" class="form-control" required>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary px-4">Submit Application</button>
+  </div>
+</form>
 
 <section class="py-5 bg-light text-black" id="contact">
   <div class="container text-black">
