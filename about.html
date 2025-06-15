@@ -26,12 +26,6 @@
     background: #000;
   }
 
-  .carousel-item img {
-    height: 500px;
-    object-fit: cover;
-    width: 100%;
-  }
-
   section {
     padding: 60px 0;
   }
@@ -40,40 +34,6 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
-  }
-
-  .grayscale {
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .grayscale:hover {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-    color: #0d6efd;
-  }
-
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 15px;
-    padding: 20px;
-    background: #000000;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  }
-
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-icon {
-    font-size: 40px;
-    color: #007BFF;
-    margin-bottom: 15px;
   }
 
   #about img,
@@ -107,10 +67,17 @@
     vertical-align: middle;
   }
 
-  /* 🔧 Responsive Fixes */
+  /* ✅ Responsive Styles */
   @media (max-width: 768px) {
-    .carousel-item img {
-      height: 250px;
+    #about .col-md-6,
+    #ceo-message .col-md-4,
+    #ceo-message .col-md-8 {
+      text-align: center;
+    }
+
+    #about .btn {
+      display: block;
+      margin: 15px auto 0;
     }
 
     .lead {
@@ -122,24 +89,14 @@
       font-size: 24px;
     }
 
-    .service-card {
-      padding: 15px;
-    }
-
     .navbar-brand img {
       width: 40px;
       height: 40px;
     }
 
-    #about .col-md-6,
-    #ceo-message .col-md-4,
-    #ceo-message .col-md-8 {
-      text-align: center;
-    }
-
-    #about .btn {
-      display: block;
-      margin: 15px auto 0;
+    #about img,
+    #ceo-message img {
+      max-height: 300px;
     }
   }
 
