@@ -15,6 +15,49 @@
 
   <!-- Custom CSS -->
   <style>
+
+
+    @media (max-width: 768px) {
+  .carousel-item img {
+    height: 220px; /* Smaller height */
+  }
+  .carousel-caption {
+    bottom: 10%; /* Move caption lower */
+    padding: 10px;
+  }
+  .carousel-caption h2 {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 180px; /* Even smaller on mobile */
+  }
+  .carousel-caption h2 {
+    font-size: 0.9rem;
+  }
+  .carousel-caption p {
+    font-size: 0.7rem;
+  }
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .navbar-brand img {
+    width: 35px;
+    height: 35px;
+  }
+  footer h5 {
+    font-size: 1rem;
+  }
+  footer ul li a {
+    font-size: 0.85rem;
+  }
+}
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
