@@ -159,32 +159,41 @@ form .btn {
 
 
 
- <div class="container mt-5">
-  <h2 class="text-center mb-4">Career Application Form</h2>
-  <form action="career.php" method="POST" enctype="multipart/form-data">
-    <div class="mb-3">
-      <label class="form-label">Full Name</label>
-      <input type="text" name="name" class="form-control" required>
+<!-- Career Form Section -->
+<section id="career" class="py-5 bg-light text-dark">
+  <div class="container">
+    <h2 class="text-center mb-5">Career Application Form</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <form action="career.php" method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Your full name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="text" name="phone" class="form-control" placeholder="03xx-xxxxxxx" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Position Applying For</label>
+            <input type="text" name="position" class="form-control" placeholder="e.g. Web Developer" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Upload Resume (PDF/DOC)</label>
+            <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Submit Application</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Email Address</label>
-      <input type="email" name="email" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Phone Number</label>
-      <input type="text" name="phone" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Position Applying For</label>
-      <input type="text" name="position" class="form-control" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Upload Resume (PDF/DOC)</label>
-      <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit Application</button>
-  </form>
-</div>
+  </div>
+</section>
 
 <section class="py-5 bg-light text-black" id="contact">
   <div class="container text-black">
