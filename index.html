@@ -19,49 +19,57 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #fff;
-      overflow-x: hidden;
       margin: 0;
       padding-top: 70px; /* For fixed navbar */
+      overflow-x: hidden;
     }
 
     /* Navbar Brand Image */
     .navbar-brand img {
-      width: 50px;
-      height: 50px;
-      border-radius: 8px;
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      object-fit: cover;
     }
 
     /* Navbar links */
     .nav-link {
       font-weight: 500;
-      transition: color 0.3s;
+      color: #ddd;
+      transition: color 0.2s ease-in-out;
     }
-
-    .nav-link:hover {
-      color: #007bff;
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #0d6efd;
+      text-decoration: none;
     }
 
     /* Carousel */
     header .carousel-item img {
-      height: 500px;
+      width: 100%;
+      height: 400px;
       object-fit: cover;
     }
 
     .carousel-caption {
-      bottom: 15%;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
+      bottom: 20%;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      max-width: 80%;
+      margin: 0 auto;
     }
 
     .carousel-caption h2 {
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 1.75rem;
       margin-bottom: 0.5rem;
     }
 
     .carousel-caption p {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0;
     }
 
     /* Section Titles */
@@ -70,6 +78,7 @@
       font-size: 2rem;
       text-align: center;
       margin-bottom: 3rem;
+      color: #fff;
     }
 
     /* Features Section */
@@ -80,30 +89,38 @@
     section.container h4 {
       font-weight: 600;
       margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
+
+    section.container p {
+      color: #bbb;
     }
 
     /* Partners Section */
     #partners {
       background-color: #111;
     }
-
     #partners img.grayscale {
       filter: grayscale(100%);
-      transition: filter 0.3s ease, transform 0.3s ease;
       max-width: 100%;
       border-radius: 8px;
+      transition: filter 0.3s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    #partners img.grayscale:hover {
+    #partners img.grayscale:hover,
+    #partners img.grayscale:focus {
       filter: grayscale(0%);
-      transform: scale(1.05);
+      outline: none;
     }
 
     /* Footer */
     footer {
       background-color: #121212;
-      padding: 2.5rem 0 1.5rem;
+      padding: 2rem 1rem;
       color: #ccc;
+      font-size: 0.9rem;
     }
 
     footer h5 {
@@ -120,28 +137,29 @@
     footer ul li a {
       color: #ccc;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color 0.2s ease;
     }
-
-    footer ul li a:hover {
-      color: #007bff;
+    footer ul li a:hover,
+    footer ul li a:focus {
+      color: #0d6efd;
+      text-decoration: underline;
     }
 
     footer .social-icons a {
       color: #ccc;
       margin-right: 1rem;
       font-size: 1.5rem;
-      transition: color 0.3s;
+      transition: color 0.2s ease;
     }
-
-    footer .social-icons a:hover {
-      color: #007bff;
+    footer .social-icons a:hover,
+    footer .social-icons a:focus {
+      color: #0d6efd;
     }
 
     footer .copyright {
       text-align: center;
       margin-top: 1.5rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #666;
     }
 
@@ -154,30 +172,31 @@
       color: #fff;
       border-radius: 50%;
       font-size: 28px;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      padding: 14px 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       z-index: 1050;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      transition: background-color 0.2s ease, transform 0.2s ease;
     }
-
-    .whatsapp-float:hover {
+    .whatsapp-float:hover,
+    .whatsapp-float:focus {
       background-color: #128C7E;
       transform: scale(1.1);
       text-decoration: none;
-      color: white;
+      color: #fff;
+      outline: none;
     }
 
     /* Responsive Adjustments */
     @media (max-width: 991.98px) {
       .carousel-caption {
-        bottom: 10%;
-        padding: 1rem 1.5rem;
+        bottom: 15%;
+        padding: 1rem 1.25rem;
       }
       .carousel-caption h2 {
         font-size: 1.5rem;
       }
       .carousel-caption p {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
 
@@ -185,11 +204,15 @@
       .carousel-item img {
         height: 220px;
       }
+      .carousel-caption {
+        bottom: 10%;
+        max-width: 95%;
+      }
       .carousel-caption h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
       }
       .carousel-caption p {
-        display: none; /* Hide on small screens */
+        font-size: 0.85rem;
       }
       .navbar-brand img {
         width: 40px;
@@ -198,6 +221,12 @@
       .section-title {
         font-size: 1.5rem;
       }
+      section.container h4 {
+        font-size: 1.1rem;
+      }
+      section.container p {
+        font-size: 0.9rem;
+      }
       footer h5 {
         font-size: 1rem;
       }
@@ -205,14 +234,7 @@
         font-size: 0.85rem;
       }
       footer .social-icons a {
-        font-size: 1.25rem;
-      }
-    }
-
-    /* Hide header carousel on very small devices if needed */
-    @media (max-width: 575.98px) {
-      header {
-        display: none;
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -331,14 +353,14 @@
         <div class="col-md-6 mb-3">
           <h5>Follow Us</h5>
           <div class="social-icons">
-            <a href="https://www.facebook.com/amsaasdevelopers" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/amsaasdevelopers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/amsaasdevelopers/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/@amsaasdevelopers12" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/amsaasdevelopers" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/amsaasdevelopers/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/amsaasdevelopers/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@amsaasdevelopers12" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
-      <div class="text-center copyright">
+      <div class="copyright">
         &copy; 2025 AM SaaS Developers. All rights reserved.
       </div>
     </div>
@@ -358,3 +380,4 @@
   </script>
 </body>
 </html>
+
