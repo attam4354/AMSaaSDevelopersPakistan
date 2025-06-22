@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> AM SaaS Developers</title>
+  <title>AM SaaS Developers</title>
 
   <link rel="icon" type="image/png" href="images/88.jpg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -14,6 +14,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: white;
+      scroll-behavior: smooth;
     }
 
     section {
@@ -24,6 +25,28 @@
       font-weight: bold;
       text-align: center;
       margin-bottom: 40px;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    h1, h3 {
+      color: #0d6efd;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #0d6efd;
+      color: #fff;
     }
 
     .whatsapp-float {
@@ -46,17 +69,31 @@
       background-color: #128C7E;
     }
 
-    .whatsapp-float i {
-      vertical-align: middle;
+    footer a:hover {
+      color: #0d6efd !important;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767.98px) {
+      h1, h3 {
+        font-size: 1.5rem;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><img src="images/88.jpg" alt="Logo" width="50" height="50"></a>
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/88.jpg" alt="Logo" width="50" height="50" class="me-2">
+      <strong>AM SaaS Developers</strong>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -73,49 +110,54 @@
 </nav>
 
 <!-- About Details Section -->
-<section class="text-white pt-5 mt-5">
+<section class="pt-5 mt-5">
   <div class="container">
-    <h1 class="text-center mb-4">More About AM SaaS Developers</h1>
-    <p class="lead">At AM SaaS Developers, we focus on delivering top-quality software and creative solutions for clients across the globe. Our team brings together talent in full-stack development, UI/UX design, digital strategy, and emerging technologies to meet your business needs.</p>
+    <h1 class="section-title">More About AM SaaS Developers</h1>
+    <p class="lead text-center">We build powerful software tailored for modern businesses.</p>
 
-    <h3 class="mt-5">Our Vision</h3>
-    <p>We envision a digital future where every business—big or small—can leverage custom software to transform how they work and grow. We're driven by a passion for clean design, scalable architecture, and future-proof solutions.</p>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h3>Our Vision</h3>
+        <p>We envision a digital future where every business can leverage technology to thrive. Clean design, scalable architecture, and future-proof solutions are our trademarks.</p>
 
-    <h3 class="mt-4">What We Do</h3>
-    <ul>
-      <li>Custom Software Development</li>
-      <li>Web and Mobile Application Design</li>
-      <li>UI/UX Design and Branding</li>
-      <li>Enterprise Solutions and SaaS Platforms</li>
-      <li>Consulting and IT Strategy</li>
-    </ul>
+        <h3 class="mt-4">Why Choose Us?</h3>
+        <p>We are not just developers—we are problem solvers. Whether it's a new idea or revamping your existing solution, we're with you from planning to support.</p>
+      </div>
+      <div class="col-md-6">
+        <h3>What We Do</h3>
+        <ul>
+          <li>Custom Software Development</li>
+          <li>Web and Mobile Application Design</li>
+          <li>UI/UX Design and Branding</li>
+          <li>Enterprise Solutions and SaaS Platforms</li>
+          <li>Consulting and IT Strategy</li>
+        </ul>
 
-    <h3 class="mt-4">Why Choose Us?</h3>
-    <p>We are not just developers—we are problem solvers. Whether it's a fresh idea or revamping your current solution, we walk with you through every step: planning, design, development, deployment, and support.</p>
-
-    <h3 class="mt-4">Our Team</h3>
-    <p>Our developers, designers, and project managers collaborate with passion, purpose, and precision to create solutions that users love and businesses value.</p>
+        <h3 class="mt-4">Our Team</h3>
+        <p>A cross-functional team of developers, designers, and project managers collaborating to create user-loved, business-driven software.</p>
+      </div>
+    </div>
 
     <div class="text-center mt-5">
-      <a href="contact.html" class="btn btn-outline-primary btn-lg">Get in Touch</a>
+      <a href="contact.html" class="btn btn-outline-primary btn-lg px-5">Get in Touch</a>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white pt-4 mt-5">
+<footer class="bg-dark text-white pt-5 mt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mb-3">
+      <div class="col-md-6 mb-4">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white">Home</a></li>
-          <li><a href="about.html" class="text-white">About Us</a></li>
-          <li><a href="services.html" class="text-white">Services</a></li>
-          <li><a href="contact.html" class="text-white">Contact</a></li>
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
         </ul>
       </div>
-      <div class="col-md-6 mb-3">
+      <div class="col-md-6 mb-4">
         <h5>Follow Us</h5>
         <a href="https://www.facebook.com/amsaasdevelopers" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
         <a href="https://www.instagram.com/amsaasdevelopers/" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
@@ -134,6 +176,6 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
+
