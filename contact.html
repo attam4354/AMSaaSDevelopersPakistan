@@ -2,113 +2,242 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AM SaaS Developers</title>
-
-  <link rel="icon" type="image/png" href="images/88.jpg">
+  <link rel="icon" type="image/png" href="images/88.jpg" />
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- AOS Animation CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Custom CSS -->
   <style>
+    /* Base styling */
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+      padding-top: 70px; /* space for fixed navbar */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #121212 !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
+
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .nav-link {
+      color: #ccc !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #0d6efd !important;
+      outline: none;
+    }
+
+    /* Section styling */
+    section {
+      padding: 60px 15px;
+    }
+
+    /* Career form */
+    #career {
+      background-color: #f8f9fa;
+      color: #000;
+      border-radius: 12px;
+      padding: 60px 30px;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    #career h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    #career p {
+      font-size: 1.125rem;
+      margin-bottom: 40px;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    form input,
+    form textarea,
+    form select {
+      border-radius: 10px !important;
+      border: 1px solid #ccc !important;
+      padding: 12px 15px !important;
+      font-size: 1rem !important;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus,
+    form select:focus {
+      border-color: #0d6efd !important;
+      box-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+      outline: none !important;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 40px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #0056b3;
+      outline: none;
+    }
+
+    /* Contact section */
+    #contact {
+      background-color: #f8f9fa;
+      color: #000;
+      border-radius: 12px;
+      padding: 60px 30px;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    #contact h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      font-size: 1.125rem;
+      margin-bottom: 40px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #121212;
+      color: #ccc;
+      padding: 30px 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    footer a {
+      color: #ccc;
+      transition: color 0.3s ease;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #0d6efd;
+      outline: none;
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      font-size: 28px;
+      padding: 15px;
+      z-index: 1050;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover,
+    .whatsapp-float:focus {
+      background-color: #128c7e;
+      transform: scale(1.1);
+      outline: none;
+      text-decoration: none;
       color: white;
     }
 
-    header {
-      background: #000;
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .navbar-brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      #career,
+      #contact {
+        padding: 40px 20px;
+        margin-bottom: 40px;
+      }
+
+      form {
+        padding: 25px;
+      }
+
+      .btn-primary {
+        padding: 10px 30px;
+        font-size: 1rem;
+      }
     }
 
-/* Responsive Spacing */
-@media (max-width: 576px) {
-  .navbar-brand img {
-    width: 40px;
-    height: 40px;
-  }
+    @media (max-width: 576px) {
+      #career h2,
+      #contact h2 {
+        font-size: 1.5rem;
+      }
 
-  form input, form textarea {
-    font-size: 14px;
-  }
+      #career p,
+      #contact p {
+        font-size: 1rem;
+      }
 
-  .btn {
-    font-size: 15px;
-    padding: 10px 20px;
-  }
-}
-
-/* Button Styling */
-.btn-primary {
-  background-color: #007BFF;
-  border-color: #007BFF;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Form Box Shadow */
-form.shadow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* style.css */
-form input, form textarea {
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  padding: 12px;
-}
-form .btn {
-  border-radius: 30px;
-}
-
-
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    font-size: 28px;
-    padding: 15px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128C7E;
-  }
-
-  .whatsapp-float i {
-    vertical-align: middle;
-  }
-#career {
-  scroll-margin-top: 100px; /* helpful when using anchor links */
-}
-
-
-
-
+      form input,
+      form textarea {
+        font-size: 0.9rem !important;
+        padding: 10px !important;
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-     <a class="navbar-brand" href="#"></a>
-    <img src="images/88.jpg" alt="img-fluid" width="50" height="50">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/88.jpg" alt="AM SaaS Developers Logo" />
+      <span>AM SaaS Developers</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
@@ -123,134 +252,108 @@ form .btn {
   </div>
 </nav>
 
-<!-- Carousel -->
-<!-- Use same header/nav/footer from index.html -->
-<!-- Services Section -->
-<!-- Services Section -->
-
-
 <!-- Career Form Section -->
-<section id="career" class="pt-5 mt-5 bg-light text-dark" style="padding-top: 100px;">
-  <div class="container">
-    <h2 class="text-center mb-4 fw-bold">Career Application Form</h2>
-    <p class="text-center mb-4">Apply now and become part of our talented team!</p>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <form action="career.php" method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-white">
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Your full name" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <input type="text" name="phone" class="form-control" placeholder="03xx-xxxxxxx" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Position Applying For</label>
-            <input type="text" name="position" class="form-control" placeholder="e.g. Web Developer" required>
-          </div>
-          <div class="mb-4">
-            <label class="form-label">Upload Resume</label>
-            <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-5 py-2">Submit Application</button>
-          </div>
-        </form>
+<section id="career" class="mt-5" tabindex="-1">
+  <div>
+    <h2 class="text-center">Career Application Form</h2>
+    <p class="text-center">Apply now and become part of our talented team!</p>
+
+    <form action="career.php" method="POST" enctype="multipart/form-data" data-aos="fade-up" aria-label="Career Application Form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name *</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Your full name" required />
       </div>
-    </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address *</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com" required />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number *</label>
+        <input type="tel" name="phone" id="phone" class="form-control" placeholder="03xx-xxxxxxx" required />
+      </div>
+      <div class="mb-3">
+        <label for="position" class="form-label">Position Applying For *</label>
+        <input type="text" name="position" id="position" class="form-control" placeholder="e.g. Web Developer" required />
+      </div>
+      <div class="mb-4">
+        <label for="resume" class="form-label">Upload Resume *</label>
+        <input type="file" name="resume" id="resume" class="form-control" accept=".pdf,.doc,.docx" required />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+      </div>
+    </form>
   </div>
 </section>
 
 <!-- Contact Section -->
-<section class="py-5 bg-light text-black" id="contact">
-  <div class="container">
-    <h2 class="text-center mb-3 fw-bold" data-aos="fade-down">Contact Us</h2>
-    <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Fill out the form below!</p>
+<section id="contact" tabindex="-1">
+  <h2 class="text-center" data-aos="fade-down">Contact Us</h2>
+  <p class="text-center" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Fill out the form below!</p>
 
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form action="contact.php" method="POST" data-aos="zoom-in" data-aos-delay="200" class="shadow p-4 rounded bg-white">
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" name="email" id="email" class="form-control" required placeholder="your@example.com">
-          </div>
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea name="message" id="message" rows="5" class="form-control" required placeholder="Write your message..."></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
-          </div>
-        </form>
-      </div>
+  <form action="contact.php" method="POST" data-aos="zoom-in" data-aos-delay="200" class="mx-auto" style="max-width: 600px;" aria-label="Contact Us Form">
+    <div class="mb-3">
+      <label for="contact-name" class="form-label">Full Name *</label>
+      <input type="text" name="name" id="contact-name" class="form-control" required placeholder="Your Name" />
     </div>
-  </div>
+    <div class="mb-3">
+      <label for="contact-email" class="form-label">Email Address *</label>
+      <input type="email" name="email" id="contact-email" class="form-control" required placeholder="your@example.com" />
+    </div>
+    <div class="mb-3">
+      <label for="subject" class="form-label">Subject</label>
+      <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" />
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message *</label>
+      <textarea name="message" id="message" rows="5" class="form-control" required placeholder="Write your message..."></textarea>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
+  </form>
 </section>
 
-
-
-
-
-
 <!-- Footer -->
-<!-- Footer Section -->
-<footer class="bg-dark text-white pt-4">
-  <div class="container">
-    <div class="row">
-
-      <!-- Quick Links -->
-      <div class="col-md-6 mb-3">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white">Home</a></li>
-          <li><a href="about.html" class="text-white">About Us</a></li>
-          <li><a href="services.html" class="text-white">Services</a></li>
-          <li><a href="contact.html" class="text-white">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Social Media Links -->
-      <div class="col-md-6 mb-3">
-        <h5>Follow Us</h5>
-        <a href="https://www.facebook.com/amsaasdevelopers" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        
-        <a href="https://www.instagram.com/amsaasdevelopers/" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="https://www.linkedin.com/company/amsaasdevelopers/" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://www.youtube.com/@amsaasdevelopers12" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
-      </div>
-
+<footer>
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+    <div>
+      <h5>Quick Links</h5>
+      <ul class="list-unstyled d-flex gap-3 mb-0 flex-wrap">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/+923237655443" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-
-    <div class="text-center pt-3 border-top mt-3">
-      <small>&copy; 2025 AM SaaS Developers. All rights reserved.</small>
+    <div>
+      <h5>Follow Us</h5>
+      <a href="https://www.facebook.com/amsaasdevelopers" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://www.instagram.com/amsaasdevelopers/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="ms-3"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://www.linkedin.com/company/amsaasdevelopers/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="ms-3"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="https://www.youtube.com/@amsaasdevelopers12" aria-label="YouTube" target="_blank" rel="noopener noreferrer" class="ms-3"><i class="fab fa-youtube fa-lg"></i></a>
     </div>
   </div>
+
+  <a href="https://wa.me/+923237655443" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="text-center pt-3 border-top mt-3 text-muted">
+    <small>&copy; 2025 AM SaaS Developers. All rights reserved.</small>
+  </div>
 </footer>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- AOS Animation JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
 </script>
 </body>
 </html>
