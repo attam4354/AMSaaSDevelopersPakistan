@@ -25,67 +25,39 @@
       background: #000;
     }
 
-    .carousel-item img {
-      height: 500px;
-      object-fit: cover;
-    }
+/* Responsive Spacing */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
 
-    section {
-      padding: 60px 0;
-    }
+  form input, form textarea {
+    font-size: 14px;
+  }
 
-    .section-title {
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-
-    .grayscale {
-  filter: grayscale(100%);
-  transition: all 0.3s ease-in-out;
-}
-.grayscale:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+  .btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
 }
 
- footer a:hover {
-    text-decoration: underline;
-    color: #0d6efd;
-  }
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 15px;
-    padding: 20px;
-    background: #000000;
-  }
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  }
-  .service-icon {
-    font-size: 40px;
-    color: #007BFF;
-    margin-bottom: 15px;
-  }
+/* Button Styling */
+.btn-primary {
+  background-color: #007BFF;
+  border-color: #007BFF;
+  transition: background-color 0.3s ease;
+}
 
-  .service-card {
-    background: #000000;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-  .service-icon {
-    font-size: 40px;
-    color: #007BFF;
-    margin-bottom: 15px;
-  }
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Form Box Shadow */
+form.shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* style.css */
 form input, form textarea {
   border-radius: 10px;
@@ -157,18 +129,14 @@ form .btn {
 <!-- Services Section -->
 
 
-
-
-<!-- Career Form Section -->
-<section id="career" class="pt-5 mt-5 bg-light text-dark">
-  <div class="container">
 <!-- Career Form Section -->
 <section id="career" class="pt-5 mt-5 bg-light text-dark" style="padding-top: 100px;">
   <div class="container">
-    <h2 class="text-center mb-5">Career Application Form</h2>
+    <h2 class="text-center mb-4 fw-bold">Career Application Form</h2>
+    <p class="text-center mb-4">Apply now and become part of our talented team!</p>
     <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10">
-        <form action="career.php" method="POST" enctype="multipart/form-data">
+      <div class="col-lg-8">
+        <form action="career.php" method="POST" enctype="multipart/form-data" class="shadow p-4 rounded bg-white">
           <div class="mb-3">
             <label class="form-label">Full Name</label>
             <input type="text" name="name" class="form-control" placeholder="Your full name" required>
@@ -185,12 +153,12 @@ form .btn {
             <label class="form-label">Position Applying For</label>
             <input type="text" name="position" class="form-control" placeholder="e.g. Web Developer" required>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Upload Resume (PDF/DOC)</label>
+          <div class="mb-4">
+            <label class="form-label">Upload Resume</label>
             <input type="file" name="resume" class="form-control" accept=".pdf,.doc,.docx" required>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary px-4">Submit Application</button>
+            <button type="submit" class="btn btn-primary px-5 py-2">Submit Application</button>
           </div>
         </form>
       </div>
@@ -198,14 +166,15 @@ form .btn {
   </div>
 </section>
 
+<!-- Contact Section -->
 <section class="py-5 bg-light text-black" id="contact">
-  <div class="container text-black">
-    <h2 class="text-center mb-4" data-aos="fade-down">Contact Us</h2>
-    <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Fill out the form below!</p>
+  <div class="container">
+    <h2 class="text-center mb-3 fw-bold" data-aos="fade-down">Contact Us</h2>
+    <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you. Fill out the form below!</p>
 
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <form action="contact.php" method="POST" data-aos="zoom-in" data-aos-delay="200">
+        <form action="contact.php" method="POST" data-aos="zoom-in" data-aos-delay="200" class="shadow p-4 rounded bg-white">
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
             <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name">
@@ -223,13 +192,14 @@ form .btn {
             <textarea name="message" id="message" rows="5" class="form-control" required placeholder="Write your message..."></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary px-4">Send Message</button>
+            <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
